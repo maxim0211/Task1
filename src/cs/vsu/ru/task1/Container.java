@@ -31,7 +31,7 @@ public class Container {
 
     /**
      * Функция определеяющая  максимальную вместимость массива
-     * на данный момент времен
+     * на данный момент времени
      * @return возвращает максимальную вместимость
      */
     int capasity(){
@@ -61,7 +61,6 @@ public class Container {
      */
     int size(){
         return size;
-
     }
 
     /**
@@ -82,7 +81,6 @@ public class Container {
         ContainerElement elem=new ContainerElement(data);   //вставляем элемент
         mass[index]=elem;
         size++;
-
     }
 
     /**
@@ -98,7 +96,7 @@ public class Container {
             }
             index++;
         }
-
+        System.out.println("Такого элемента не существует");
         return false;
     }
 
@@ -108,7 +106,7 @@ public class Container {
      * @return true, если элемент успешно удалён
      */
     boolean removeByIndex(int index){
-        if(index<mass.length && mass[index]!=null) {
+        if(index < mass.length && mass[index]!=null) {
             for (int i = index; i < size() - 1; i++) {
                 mass[i] = mass[i + 1];                      //просто смещаем все элементы, тем самым элемент пропадает
             }
@@ -118,7 +116,6 @@ public class Container {
             return true;
         }
         else {
-
             System.out.println("\nУдаление не произошло, такого индекса  не существует");
             return  false;
         }
@@ -132,7 +129,6 @@ public class Container {
      * @see Container#removeByIndex(int)   удаляет элемент по индексу
      */
     boolean removeByValue(int data){
-
         int index=indexOf(data);
         if (index!=-1)  {
             removeByIndex(index);
@@ -142,7 +138,6 @@ public class Container {
             System.out.println("Удаление не произошло, не удалось найти элемент с таким значением");
             return  false;
         }
-
     }
 
     /**
