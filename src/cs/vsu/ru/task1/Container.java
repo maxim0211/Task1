@@ -15,11 +15,11 @@ public class Container {
 
 
     /**
-     * Конструктор класс, создающий объекты контэйнера
+     * Конструктор класса, создающий объекты контэйнера
      * @param n - количество элементов в контэйнере
      */
     Container(int n) {
-        mass = new ContainerElement[16];
+        mass = new ContainerElement[n];
     }
 
     /**
